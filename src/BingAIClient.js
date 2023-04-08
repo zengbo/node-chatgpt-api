@@ -498,7 +498,7 @@ export default class BingAIClient {
                             return;
                         }
                         if (eventMessage?.author !== 'bot') {
-                            reject(new Error('Unexpected message author.'));
+                            reject(new Error(`Unexpected message author: ${eventMessage?.author}.`));
                             return;
                         }
                         // The moderation filter triggered, so just return the text we have so far
